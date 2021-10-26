@@ -1,0 +1,54 @@
+<aside id="aside" class="hidden absolute inset-0 mt-22 lg:mt-0 lg:mb-8 w-full lg:w-1/5 lg:static lg:block bg-white overflow-y-visible lg:px-0 z-10" data-target="application.nav" data-turbolinks-permanent="">
+  <div class="lg:hidden mt-4 mx-4">
+    <form class="relative" data-controller="search">
+      <input type="text" name="search" autocomplete="off" placeholder="Search the docs (press &quot;/&quot; to focus)" class="transition duration-200 border {{styles.border.primary.one}} focus:{{styles.border.primary.two}} {{styles.text.alt.five}} outline-none rounded w-full px-4 py-2" data-action="keyup->search#search focus->search#search click->search#search" data-target="application.search"/>
+      <div class="hidden absolute top-0 left-0 right-0 bg-white z-20 p-4 mt-12 rounded border {{styles.border.primary.one}} overflow-x-auto overflow-y-auto" data-target="search.results" style="max-height: 75vh;"></div>
+    </form>
+  </div>
+  <div class="overflow-y-auto lg:sticky top-0 px-8 lg:px-0">
+    <nav class="text-sm font-semibold pt-8 pb-40 lg:py-12 pr-6 overflow-y-auto h-screen" data-action="navigated@document->application#restoreScrollPosition" data-target="application.innerNav">
+      <ul class="-mt-1 ml-2" data-controller="nav" data-nav-active="{{styles.background.primary.two}} {{styles.text.alt.four}} hover:{{styles.text.alt.four}}">
+        {% for pageLink in meta.leftNavLinks %}
+          {% set tag = pageLink.name | lower %}
+          <li class="mb-4">
+            {% if page
+              .url
+              .split('/')[1] === tag %}
+              <details open>
+                <summary>
+                  <a alt="{{ pageLink.alt }}" href="{{ pageLink.url }}" class="flex items-center my-1 transition duration-100 {{styles.text.primary.one}} hover:{{styles.text.primary.three}} rounded">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="{{ pageLink.viewbox }}" class="w-6 {{styles.text.primary.two}} fill-current">
+                      {{ pageLink.svg | safe}}
+                    </svg>
+                    <span class="ml-2">{{ pageLink.name }}</span>
+                  </a>
+                </summary>
+                {% set sortedList = [] %}
+                {% for post in collections[pageLink.tag] %}
+                {% set
+sortedList = (sortedList.push({title: post.data.title, url: post.url}),
+sortedList) %} {% endfor %}
+                <ul>
+                  {% for thing in sortedList | sort(attribute='title')%}
+                    <li class="pl-8">
+                      <a href="{{thing.url | url }}">
+                        {{ thing.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </details>
+            {% else %}
+              <a href="{{ pageLink.url }}" class="flex items-center my-1 transition duration-100 {{styles.text.primary.one}} hover:{{styles.text.primary.three}} rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="{{ pageLink.viewbox }}" class="w-6 {{styles.text.primary.two}} fill-current">
+                  {{ pageLink.svg | safe}}
+                </svg>
+                <span class="ml-2">{{ pageLink.name }}</span>
+              </a>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</aside>

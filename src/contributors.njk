@@ -1,0 +1,50 @@
+---
+layout: base
+---
+
+Thank you for your help with in the {{ meta.siteName }}!
+
+<h2 class="text-4xl"> RedwoodJS contributors </h2>
+<div class="grid grid-flow-col grid-rows-4 gap-4">
+{% for user in contributors %}
+<div class="rounded-3xl overflow-hidden shadow-xl max-w-xs my-3 bg-blue-500">
+  	<img src="https://i.imgur.com/dYcYQ7E.png" class="w-full" />
+    <div class="flex justify-center ">
+        <img src="{{user.avatar_url}}" class="rounded-full border-solid border-white border-2 -mt-3">		
+    </div>
+	<div class="text-center px-3 pb-6 pt-2">
+		<h3 class="text-white text-sm bold font-sans">{{user.name}}</h3>
+		<p class="mt-2 font-sans font-light text-white">{{ user.login }}</p>
+	</div>
+  	<div class="flex justify-center pb-3 text-white">
+      <div class="text-center mr-3 pr-3">
+        <h2>{{user.contributions}}</h2>
+        <span>Contributions</span>
+      </div>
+  	</div>
+</div>
+{% endfor %}
+</div>
+
+<h2 class="text-4xl"> RedwoodJS Docs </h2>
+<div class="grid grid-flow-col grid-rows-4 gap-4">
+{% for user2 in docsContributors %}
+<div class="rounded-3xl overflow-hidden shadow-xl max-w-xs my-3 bg-blue-500">
+  	<img src="https://i.imgur.com/dYcYQ7E.png" class="w-full" />
+    <div class="flex justify-center ">
+        <img src="{{user2.avatar_url}}" class="rounded-full border-solid border-white border-2 -mt-3">		
+    </div>
+	<div class="text-center px-3 pb-6 pt-2">
+		<h3 class="text-white text-sm bold font-sans">{{user2.name}}</h3>
+		<p class="mt-2 font-sans font-light text-white">{{ user2.login }}</p>
+	</div>
+  	<div class="flex justify-center pb-3 text-white">
+      <div class="text-center mr-3 pr-3">
+        <h2>{{user2.contributions}}</h2>
+        <span>Contributions</span>
+      </div>
+  	</div>
+</div>
+{% endfor %}
+</div>
+
