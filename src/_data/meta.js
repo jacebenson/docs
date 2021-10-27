@@ -8,7 +8,7 @@ module.exports = {
     "Own your work, and your automation!",
   siteImage: "images/opengraph-256.png",
   siteURL: "https://docs.tskr.io/",
-  twitterHandle: "@tskrio",
+  twitterHandle: "@IoTskr",
   siteTwitterTitle: "Tskr, track your work and your automation",
   navLinks: [
     links.docs,
