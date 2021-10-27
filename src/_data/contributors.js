@@ -2,8 +2,8 @@ require('dotenv').config()
 const fetch = require("node-fetch");
 const links = require('./links');
 module.exports = async function() {
-  console.log( "Fetching new github redwood contributors" );
   if(process.env.dev){
+    console.log( "Faux: Fetching new github tskrbase contributors" );
     return [
       {
         login: 'lsimpson',
@@ -70,6 +70,7 @@ module.exports = async function() {
       }
     ];
   } else {//if not in dev mode make call
+    console.log( "Fetching new github tskrbase contributors" );
   // GitHub API: https://developer.github.com/v3/repos/#get
   return fetch(links.github.contributorsApi)
     .then(res => res.json()) // node-fetch option to transform to json

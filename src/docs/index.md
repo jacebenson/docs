@@ -35,3 +35,28 @@ Well, with a RedwoodJS project you need to configure
 
 
 You can do that, this is just an opinionated way to get started.
+
+## Contributors
+
+<div class="flex flex-wrap -mb-4">
+{% for user in contributors %}
+   <div class="flex justify-center pb-1 ">
+      <span><a href="{{ user.html_url }}" alt="{{ user.login }}" title="{{ user.login }}">
+      <img src="{{ user.avatar_url }}" class="w-16 h-16 rounded-full" /></a><span>
+    </div>
+{% endfor %}
+</div>
+
+
+## Docs Contributors
+<div class="flex flex-wrap -mb-4">
+
+{{ docsContributors  }}
+
+{% for user in docsContributors  %}
+   <div class="flex justify-center pb-1 ">
+      <span><a href="{{ user.html_url }}" alt="{{ user.login }}" title="{{ user.login }}">
+      <img src="{{ user.avatar_url }}" class="w-16 h-16 rounded-full" /></a><span>
+    </div>
+{% endfor %}
+</div>

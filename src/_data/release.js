@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 const links = require('./links');
 module.exports = async function() {
   console.log( "Fetching new github release and link");
-  if(process.env.dev){
+  if(false){
     return {
       name: "v.0.99.9+",
       url: "/"
@@ -17,7 +17,7 @@ module.exports = async function() {
       // github public api is limited to 60 calls per hour
       // if a bunch of builds are happening at once, this will fail
       return {
-        name: json[0]?.name || "v0.0",
+        name: json[0]?.name || "v0.1",
         html_url: json[0]?.html_url || links.github.allReleases
       }
     });
