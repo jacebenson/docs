@@ -25,7 +25,7 @@ Well, with a RedwoodJS project you need to configure
 - [Authentication](/docs/api/auth)
 - [Table and Field Permissions aka Directives](/docs/api/directives)
 - [Table Schema](/docs/api/schema)
-- [Services](/docs/api/servies)
+- [Services](/docs/api/services)
 - [Middleware](/docs/api/middleware)
 - [GraphQL Types, Mutations, and Queries](/docs/api/graphql)
 - [Routes](/docs/web/routes)
