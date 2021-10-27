@@ -1,5 +1,5 @@
 ---
-title: RedwoodJS - Bringing Full-stack to the Jamstack
+title: Tskr - Low to no cost starter to manage your app
 layout: home.njk
-description: An opinionated Javascript framework that combines React, GraphQL, Prisma2, SQL, and lots more out of the box.
+description: Get started with Tskr, a low to no cost starter to manage your app
 ---

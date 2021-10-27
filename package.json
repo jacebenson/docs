@@ -1,7 +1,7 @@
 {
-  "name": "redwood-site",
+  "name": "tskr-docs",
   "version": "1.0.0",
-  "description": "RedwoodJS Marketing Site",
+  "description": "TskrBase Marketing Site",
   "main": "index.html",
   "scripts": {
     "start": "eleventy --serve",
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jacebenson/redwoodjs.com.git"
+    "url": "git+https://github.com/tskrio/docs.git"
   },
   "author": "5t3ph",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/redwoodjs/redwoodjs.com/issues"
+    "url": "https://github.com/tskrio/docs/issues"
   },
   "dependencies": {
     "dotenv": "^10.0.0",
