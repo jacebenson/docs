@@ -23,10 +23,10 @@ RedwoodJS then takes your code, and builds it into the right parts so it can be 
 
 Well, with a RedwoodJS project you need to configure 
 - [Authentication](/docs/api/auth)
-- [Table and Field Permissions aka Directives](/docs/api/directives)
+- [Table and Field Permissions](/docs/api/permissions)
 - [Table Schema](/docs/api/schema)
 - [Services](/docs/api/services)
-- [Middleware](/docs/api/middleware)
+- [Middleware](/docs/api/rules)
 - [GraphQL Types, Mutations, and Queries](/docs/api/graphql)
 - [Routes](/docs/web/routes)
 - [Layouts](/docs/web/layouts)
