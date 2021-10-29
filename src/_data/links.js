@@ -64,7 +64,7 @@ module.exports = {
         name: "GitHub",
         alt: "Go to the Tskrio GitHub repo",
         tooltip: "<strong>GitHub</strong><br>Go to the Tskrio GitHub repo",
-        stargazersApi:       `https://api.github.com/repos/${thisGitHubRepo}/`,
+        stargazersApi:       `https://api.github.com/repos/${thisGitHubRepo}`,
         releasesApi:         `https://api.github.com/repos/${thisGitHubRepo}/releases?per_page=1`,
         contributorsApi:     `https://api.github.com/repos/${thisGitHubRepo}/contributors`,
         docsContributorsApi: `https://api.github.com/repos/tskrio/docs/contributors`,
@@ -72,7 +72,7 @@ module.exports = {
         docs: `https://github.com/repos/tskrio/docs/`
     },
     twitter: {
-        url: "https://twitter.com/tskrio",
+        url: "https://twitter.com/IoTskr",
         name: "Twitter",
         alt: "Follow Tskr on Twitter",
         tooltip: "<strong>Twitter</strong><br>Follow Tskr on Twitter",

@@ -70,7 +70,7 @@ module.exports = async function() {
       }
     ];
   } else {//if not in dev mode make call
-    console.log( "Fetching new github Tskr docs contributors" );
+    console.log( "Fetching new github Tskr docs contributors...", links.github.docsContributorsApi );
   // GitHub API: https://developer.github.com/v3/repos/#get
   return fetch(links.github.docsContributorsApi)
     .then(res => res.json()) // node-fetch option to transform to json
