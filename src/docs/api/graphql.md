@@ -36,7 +36,7 @@ Here's a list of the hooks that are available:
 
 ## Server Side
 
-Normally when you need to define a GraphQL server there's loads of things to set up.  With RedwoodJS (and also TskrBase) all you need to set up is the [GraphQL Schema](/docs/api/schema) and the [Services](/docs/api/services).
+Normally when you need to define a GraphQL server there's loads of things to set up.  With RedwoodJS (and also Tskr) all you need to set up is the [GraphQL Schema](/docs/api/schema) and the [Services](/docs/api/services).
 
 ### Default Resolvers
 
@@ -80,7 +80,7 @@ age: (_args, { root }) => new Date().getFullYear() - root.birthDate.getFullYear(
 
 ### Context
 
-In TskrBase, the `context` is available to any server if you import the `@redwoodjs/graphql-server` package.
+In Tskr, the `context` is available to any server if you import the `@redwoodjs/graphql-server` package.
 
 `context` is read-only in your services.  You can change it but only in the `createGraphQLHandler`.  <https://redwoodjs.com/docs/graphql#how-to-modify-the-context>
 

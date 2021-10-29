@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 const links = require('./links');
 module.exports = async function() {
   if(process.env.dev){
-    console.log( "Faux: Fetching new github tskrbase docs contributors" );
+    console.log( "Faux: Fetching new github Tskr docs contributors" );
     return [
       {
         login: 'lsimpson',
@@ -70,7 +70,7 @@ module.exports = async function() {
       }
     ];
   } else {//if not in dev mode make call
-    console.log( "Fetching new github tskrbase docs contributors" );
+    console.log( "Fetching new github Tskr docs contributors" );
   // GitHub API: https://developer.github.com/v3/repos/#get
   return fetch(links.github.docsContributorsApi)
     .then(res => res.json()) // node-fetch option to transform to json

@@ -1,4 +1,4 @@
-let thisGitHubRepo = "tskrio/tskrBase";
+let thisGitHubRepo = "tskrio/tskr";
 module.exports = {
     docs: {
         tag: "docs",
@@ -8,9 +8,9 @@ module.exports = {
         svg: '<path d="M0 0h24v24H0V0z" fill="none"></path><path d="M13 13l-3-2.25L7 13V4H6v16h12V4h-5z" opacity=".3"></path><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 4h2v5l-1-.75L9 9V4zm9 16H6V4h1v9l3-2.25L13 13V4h5v16z"></path>',
         alt: "Read the Docs"
     },
-    roadmap: {
-        url: "/roadmap",
-        name: "Roadmap",
+    about: {
+        url: "/about",
+        name: "About us",
         viewbox: "0 0 24 24",
         svg: '<path d="M0 0h24v24H0V0z" fill="none"></path><path d="M5 18.31l3-1.16V5.45L5 6.46zm11 .24l3-1.01V5.69l-3 1.17z" opacity=".3"></path><path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM8 17.15l-3 1.16V6.46l3-1.01v11.7zm6 1.38l-4-1.4V5.47l4 1.4v11.66zm5-.99l-3 1.01V6.86l3-1.16v11.84z"></path>',
         alt: "Path to 1.0"
@@ -68,7 +68,8 @@ module.exports = {
         releasesApi:         `https://api.github.com/repos/${thisGitHubRepo}/releases?per_page=1`,
         contributorsApi:     `https://api.github.com/repos/${thisGitHubRepo}/contributors`,
         docsContributorsApi: `https://api.github.com/repos/tskrio/docs/contributors`,
-        allReleases:         `https://github.com/${thisGitHubRepo}/releases/`
+        allReleases:         `https://github.com/${thisGitHubRepo}/releases/`,
+        docs: `https://github.com/repos/tskrio/docs/`
     },
     twitter: {
         url: "https://twitter.com/tskrio",
