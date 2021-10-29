@@ -73,12 +73,25 @@
   <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-solarizedlight.css" rel="stylesheet">
   <title>{{ title }}{% if page.url != '/' %} | {{ meta.siteName }}{% endif %}</title>
   <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+  <script>
+  document.addEventListener("DOMContentLoaded", ()=>{
+  let aside = document.querySelector('aside');
+  let ham = document.querySelector('#small-hamburger');
+  ham.addEventListener('click', (e)=>{
+    console.log('show aside');
+    e.preventDefault();
+    aside.classList.toggle('hidden')
+  })
+  });
+  </script>
 </head>
 <body class="relative bg-white {{styles.text.primary.four}} font-sans antialiased h-full flex flex-col">
   <div class="flex-grow flex-shrink-0 flex-auto">
   {% include "nav.njk" %}
-
+  {% block aside %}{{ aside }}{% endblock %}
+  {% block content %}
   {{ content | safe }}
+  {% endblock %}
   {% include "footer.njk" %}
 
 </body>

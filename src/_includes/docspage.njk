@@ -6,12 +6,12 @@ layout: base.njk
   <h1>{{ title }}</h1>
 </header>-->
 <main>
-  <div class="lg:flex lg:items-center max-w-screen-xl mx-auto">
+  <div class="flex lg:ml-40">
   {% block aside %}
-    {% include "homeleftnav.njk" %}
+    {% include "leftpagenav.njk" %}
   {% endblock %}
-    <div class="flex w-full lg:w-5/5">
-      <article class="w-full xl:w-4/4 lg:mr-auto">
+    <div class="flex w-full lg:w-4/5 ">
+      <article class="w-full max-w-4xl xl:w-4/4 my-8 lg:px-8 lg:mr-auto">
         {{ content | safe }}
       </article>
       <aside class="xl:w-4/4 hidden xl:block w-full pr-6 h-auto overflow-y-visible">

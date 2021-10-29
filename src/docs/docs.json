@@ -1,4 +1,4 @@
 {
     "tags": ["docs"],
-    "layout": "page.njk"
+    "layout": "docspage.njk"
 }
