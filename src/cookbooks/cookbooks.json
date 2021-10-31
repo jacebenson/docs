@@ -1,4 +1,4 @@
 {
     "tags": ["cookbooks"],
-    "layout": "page.njk"
+    "layout": "docspage.njk"
 }
