@@ -34,7 +34,7 @@ I have a use case where I want to allow administrators to control avatars.  Afte
     ```
 2.  Update the components (`./web/src/components/User/UsersCell/UsersCell.js`) that use it.  
     
-    ```js/1,6,12/
+    ```js/1,6,9,12/
     // imports ...
     import { webProperties } from 'src/lib/webProperties'
     // exports ...
