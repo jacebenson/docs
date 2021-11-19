@@ -23,8 +23,7 @@ These middleware files have some important attributes.
 - `order` - This is the order in which the rule will be executed.
 - `when` - This is an array of when e.g. `before`, or `after` the database call.
 - `type` - This is the type or operation that the rule is being executed for. e.g. `create`, `read`, `update`, `delete`.
-- `command` - This is the code that is executed.
-- `title` - This is the title of the rule, used for logging.
+- `command` - This is the code that is executed. You need to return the incoming variables at the end of command.
 - `file` - This is the file name of the rule. (default is `__filename`) this may be used for reducing the code in the services eventually.
 
 
@@ -33,15 +32,27 @@ In vague terms, the desire is to make the available options as simple as possibl
 
 For instance on create, there is no record, just the data. So we just pass your the data.
 
-| Type   | When   | Data Available | Notes                                    |
-| ------ | ------ | -------------- | ---------------------------------------- |
-| create | before | form input     | `data` is the data from the form input.  |
-| create | after  | form input     | `data` is the data from the form input.  |
-| read   | before | record         | `record` is the record that was read.    |
-| read   | after  | record         | `record` is the record that was read.    |
-| update | before | form input     | `data` is the data from the form input.  |
-| update | after  | form input     | `data` is the data from the form input.  |
-| delete | before | id of record   | `id` of the record to be deleted.          |
-| delete | after  | id of record   | `id` of the record that was deleted.       |
+| Operation | When   | Data Available     |
+| --------- | ------ | ------------------ |
+| create    | before | `input`, `status`  |
+| create    | after  | record created     |
+| readall   | before | `status`           |
+| readall   | after  | records            |
+| read      | before | `id`, `status`     |
+| read      | after  | record read        |
+| update    | before | `input`, `status`  |
+| update    | after  | record updated     |
+| delete    | before | `id`, `status`     |
+| delete    | after  | record deleted     |
 
 On the before, if you need the full record before the database call, you can use the prisma client to read the data.  
+
+### status
+Status is a special object in rules.  If you don't update status at all, the rule you write will work.  However, if you want to stop the action from happening and all later rules, set the status.code to something other than `success` and set the `message` to convey that to the user taking this action.
+### id
+
+id is the id of the record read.  If you want to ensure something is protected from deletion, you can invoke a database read using the ID and then conditionally
+
+### input
+
+input is the JSON content of the create or update operations.  
