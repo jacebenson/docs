@@ -16,8 +16,14 @@
       <ul class="flex flex-wrap mt-8 justify-center lg:justify-start lg:-ml-2 list-none">
         <li class="px-2 whitespace-no-wrap">
           <a
-            href="{{links.netlify.url}}"
+            href="#"
             class="block mt-2 {{styles.background.primary.five}} text-white px-4 py-3 font-semibold rounded hover:{{styles.background.primary.four}} transition duration-200 text-lg"
+            onclick="(()=>{
+              let dburl = document.querySelector('#database_url').value;
+              let sessionsecret = document.querySelector('#session_secret').value;
+              toggleModal('modal-example-large')
+              console.log(`{{links.netlify.url}}#DATABASE_URL=${dburl}&SESSION_SECRET=${sessionsecret}`)
+          })()"
             >{{links.netlify.name}}</a>
         </li>
         <li class="px-4 whitespace-no-wrap">
