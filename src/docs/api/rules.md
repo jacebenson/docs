@@ -34,16 +34,16 @@ For instance on create, there is no record, just the data. So we just pass your 
 
 | Operation | When   | Data Available     |
 | --------- | ------ | ------------------ |
-| create    | before | `input`, `status`  |
-| create    | after  | `record`, `status` |
+| create    | before | `status`, `input`  |
+| create    | after  | `record`           |
 | readall   | before | `status`           |
-| readall   | after  | `records`, `status`|
-| read      | before | `id`, `status`     |
-| read      | after  | `record`, `status` |
-| update    | before | `input`, `status`  |
-| update    | after  | `record`, `status` |
-| delete    | before | `id`, `status`     |
-| delete    | after  | `record`, `status` |
+| readall   | after  | `records`          |
+| read      | before | `status`, `id`     |
+| read      | after  | `record`           |
+| update    | before | `status`, `input`  |
+| update    | after  | `record`           |
+| delete    | before | `status`, `id`     |
+| delete    | after  | `record`           |
 
 On the before, if you need the full record before the database call, you can use the prisma client to read the data.  
 
