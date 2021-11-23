@@ -34,25 +34,33 @@ For instance on create, there is no record, just the data. So we just pass your 
 
 | Operation | When   | Data Available     |
 | --------- | ------ | ------------------ |
-| create    | before | `input`, `status`  |
-| create    | after  | record created     |
+| create    | before | `status`, `input`  |
+| create    | after  | `record`           |
 | readall   | before | `status`           |
-| readall   | after  | records            |
-| read      | before | `id`, `status`     |
-| read      | after  | record read        |
-| update    | before | `input`, `status`  |
-| update    | after  | record updated     |
-| delete    | before | `id`, `status`     |
-| delete    | after  | record deleted     |
+| readall   | after  | `records`          |
+| read      | before | `status`, `id`     |
+| read      | after  | `record`           |
+| update    | before | `status`, `input`  |
+| update    | after  | `record`           |
+| delete    | before | `status`, `id`     |
+| delete    | after  | `record`           |
 
 On the before, if you need the full record before the database call, you can use the prisma client to read the data.  
 
 ### status
-Status is a special object in rules.  If you don't update status at all, the rule you write will work.  However, if you want to stop the action from happening and all later rules, set the status.code to something other than `success` and set the `message` to convey that to the user taking this action.
+`status` is a special object in rules.  If you don't update status at all, the rule you write will work.  However, if you want to stop the action from happening and all later rules, set the status.code to something other than `success` and set the `message` to convey that to the user taking this action.
+
+Status is only available on before rules.  After rules will compete with the `toast.success` of the [form component](/docs/web/forms).  
+
+> Eventually it would be nice to queue these messages up and show them, we just aren't there yet.
 ### id
 
-id is the id of the record read.  If you want to ensure something is protected from deletion, you can invoke a database read using the ID and then conditionally
+`id` is the id of the record read.  If you want to ensure something is protected from deletion, you can invoke a database read using the ID and then conditionally
 
 ### input
 
-input is the JSON content of the create or update operations.  
+`input` is the JSON content of the create or update operations.  
+
+### record
+
+`record` is the record returned from the database after the operation.

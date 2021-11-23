@@ -12,6 +12,7 @@ module.exports = {
   siteTwitterTitle: "Tskr, track your work and your automation",
   navLinks: [
     links.docs,
+    links.rest,
     links.about,
   ],
   iconLinks: [

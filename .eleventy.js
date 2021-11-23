@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPassthroughCopy("./src/css/");
   eleventyConfig.addPassthroughCopy("./src/images/");
+  eleventyConfig.addPassthroughCopy("./src/rest/");
   eleventyConfig.addWatchTarget("./src/css/");
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
   let markdownLibrary = markdownIt({
