@@ -9,6 +9,13 @@ The table schema is a defined... in a two places. The Prisma schema file, and th
 - `./api/db/schema.prisma`
 - `./api/src/graphql/user.sdl.js`
 
+
+## User And Group Scheme
+
+![User Scheme](/images/scheme-user.png)
+![Group Scheme](/images/scheme-group.png)
+
+You can generate this same data from [GraphQL Voyager](https://apis.guru/graphql-voyager/).
 ## Prisma Schema
 
 The Prisma schema file (short: schema file, Prisma schema or schema) is the main configuration file for your Prisma setup. It is typically called schema.prisma and consists of the following parts. We're going to skip [Generators](https://www.prisma.io/docs/concepts/components/prisma-schema/generators) as that's not generally unchanging.
