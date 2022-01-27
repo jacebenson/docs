@@ -27,7 +27,6 @@ This project should only ever have Users, Groups, Group Roles, Group Members as 
 
 Well initially I'd like to see the following happen.
 
-- Adding Chakra UI to the project for a modular and accessible component library
 - A place to store email templates.  Regardless what email provider you use, you'll eventually need html to send.  So some place to store those.  Probably under `./api/src/`.
 - A place to store table actions.  When you click the vertical elipsis, you'll see a list of actions.  These bits of code need to exist somewhere.  Another folder under `./web/src/` 
 - Rewriting the Table Component to be individual components for the `TableHeader`, `TableBody`, and `TableRow`.
