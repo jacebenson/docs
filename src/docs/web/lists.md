@@ -1,7 +1,10 @@
 ---
-title: "web/Lists ~ Tables"
+title: "web/Lists"
 ---
-A better title might be tables.  
+
+> This document is a little out of date as lists have been rewritten some to conform with the custom generators. - JB 2022-01-26
+
+A better title might be tables.
 
 The [TableComponent](https://github.com/tskrio/tskr/blob/main/web/src/components/TableComponent/TableComponent.js) takes a number of `props` and then passes that data into react-table.
 
@@ -12,7 +15,7 @@ The [TableComponent](https://github.com/tskrio/tskr/blob/main/web/src/components
 - `data` - The data to present
 - `queries` - Includes the `DELETEMUTATION` to allow deletes from the list, and the `QUERY` for refetching but that doesn't seem to work yet.
 - `routes` - Determines where you go when you click on `New Record`, and `Edit`
-- `display` - Controls what is displayed as the `title` attribute of `New Record` and `Edit`.  This is seen as a hoverover now.
+- `display` - Controls what is displayed as the `title` attribute of `New Record` and `Edit`. This is seen as a hoverover now.
 - `roles` - Controls what buttons you see depending on the `deleteRecord`, `createRecord`, `editRecord` roles defined.
 - `queryVariables` - Not used as it depends on `QUERY` working with refetches.
 - `count` - used to display the number of results
@@ -23,11 +26,12 @@ The [TableComponent](https://github.com/tskrio/tskr/blob/main/web/src/components
 
 ## Search / Filtering
 
-Search works but still needs improvement at the query it shows is rough.  The search box will search fields defined in the `service` file.
+Search works but still needs improvement at the query it shows is rough. The search box will search fields defined in the `service` file.
 
 ## Pagination
 
 We have pagination, but like search it could be improved.
+
 ## Sort (click the heading of a column)
 
 This is all set and is working.

@@ -6,17 +6,19 @@ title: "Add API Properties"
 
 API properties are used to define the properties of the api-side of this service.
 
-So far I've come up against the following problem and this is how I solved it.  I have a [rule](/docs/api/rules) that emails users when they create an account.  I don't want to email users when I'm working on my fork, so I'm going to add a property to the rule that will prevent it from being sent.
+So far I've come up against the following problem and this is how I solved it. I have a [rule](/docs/api/rules) that emails users when they create an account. I don't want to email users when I'm working on my fork, so I'm going to add a property to the rule that will prevent it from being sent.
 
 API Properties are just record on the property table.
 
-To access them in rules you can do a direct query.  Below is code from a rule I use before I send an email.
+To access them in rules you can do a direct query. Below is code from a rule I use before I send an email.
 
 ### Setting properties
 
 Just create or update a record.
+
 ### Reading properties
-1.  Update the `./api/src/rule/users/emailUserWelcome.js` file.
+
+1. Update the `./api/src/rule/users/emailUserWelcome.js` file.
 
     ```js/1,8-10,12-14,16-18/
     import { logger } from 'src/lib/logger'
