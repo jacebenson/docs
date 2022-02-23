@@ -11701,6 +11701,7 @@ video {
 
 .list-none {
   list-style-type: none;
+  font-family: monospace;
 }
 
 .list-disc {

@@ -19,17 +19,20 @@
                 </summary>
                 {% set sortedList = [] %}
                 {% for post in collections[pageLink.tag] %}
+                
                 {% set
-sortedList = (sortedList.push({title: post.data.title, url: post.url}),
+sortedList = (sortedList.push({title: post.data.title, url: post.url, order: post.data.order}),
 sortedList) %} {% endfor %}
                 <ul>
-                  {% for thing in sortedList | sort(attribute='title')%}
-                    <li class="list-none">
-                      <a href="{{thing.url | url }}">
-                        {{ thing.title }}
-                      </a>
-                    </li>
-                  {% endfor %}
+                    {% for thing in sortedList | sort(attribute='order')%}
+                      {% set currentPage = thing.url === page.url %}
+                      <li class="list-none">
+                        <a href="{{thing.url | url }}" class="">
+                          {{ thing.title }}
+                          {% if thing.url === page.url %}📌{% endif %}
+                        </a>
+                      </li>
+                    {% endfor %}
                 </ul>
               </details>
             {% else %}
