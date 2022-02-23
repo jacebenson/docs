@@ -1,5 +1,6 @@
 ---
-title: "web/Routes"
+title: "⠀⠀└─ Routes.js"
+order: 1465
 ---
 
 > Redwood features its own router that brings some awesome innovation to this often overlooked (but important) part of your app. Named routes let you reference a route by a name you define, route param types take care of coercing values based on data type or custom functions, and more.

@@ -28,8 +28,8 @@ On the API side this will generate the [Schema Definition Language](/docs/api/sd
 
 ```
 ./api/src
-├── graphql/model.sdl.js                         # created
-└── services/model.js                            # created
+├─ graphql/model.sdl.js                         # created
+└─ services/model.js                            # created
 ```
 
 ### SDL 
@@ -93,26 +93,26 @@ On the web side a bunch of things are made and updated, we'll keep using `users`
 
 ```
 ./web/src
-├── Routes.js                           # modified
-├── layouts/                            # created
-│   └── UsersLayout/
-│       └── UsersLayout.js              # created
-├── pages/
-│   └── User
-|       ├──EditUserPage/EditUserPage.js # created
-|       ├──NewUserPage/NewUserPage.js   # created
-|       ├──UserPage/UserPage.js         # created
-|       └──UsersPage/UsersPage.js       # created
-└── components/
-    └── User
-        ├──EditUserCell/EditUserPage.js # created
-        ├──NewUser/NewUser.js           # created
-        ├──User/User.js                 # created
-        ├──UserCell/UserCell.js         # created
-        ├──UserForm/UserForm.js         # created
-        ├──Users/Users.js               # created
-        ├──UsersCell/UsersCell.js       # created
-        └──UserCell/UsersPage.js        # created
+├─ Routes.js                           # modified
+├─ layouts/                            # created
+│   └─ UsersLayout/
+│       └─ UsersLayout.js              # created
+├─ pages/
+│   └─ User
+|       ├─EditUserPage/EditUserPage.js # created
+|       ├─NewUserPage/NewUserPage.js   # created
+|       ├─UserPage/UserPage.js         # created
+|       └─UsersPage/UsersPage.js       # created
+└─ components/
+    └─ User
+        ├─EditUserCell/EditUserPage.js # created
+        ├─NewUser/NewUser.js           # created
+        ├─User/User.js                 # created
+        ├─UserCell/UserCell.js         # created
+        ├─UserForm/UserForm.js         # created
+        ├─Users/Users.js               # created
+        ├─UsersCell/UsersCell.js       # created
+        └─UserCell/UsersPage.js        # created
 ```
 That's a lot of files.  The things that need modification to get working are;
 

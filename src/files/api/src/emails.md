@@ -1,5 +1,6 @@
 ---
-title: "api/Email"
+title: "⠀⠀├─ emails/"
+order: 320
 ---
 
 ## Email

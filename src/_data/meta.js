@@ -21,6 +21,8 @@ module.exports = {
   ],
   leftNavLinks: [
     links.docs,
+    links.files,
+    links.schema,
     links.cookbooks,
   ],
   footerLinks: [
